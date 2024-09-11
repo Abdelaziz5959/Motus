@@ -19,9 +19,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 50vh;
-    width: 70vw;
-    background-color: #FFE5D4;
+    height: 35vh;
+    width: 50vw;
+    background-color: #BFD3C1;
     border-radius: 1rem;
 }
 
@@ -42,16 +42,11 @@ body{
     padding: 2rem;
     border-radius: 10px;
     font-weight: bold;
-    border: 1px solid black;
+    border: 2px solid black;
 
 }
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 871e22e0987e124dbb31e24db9699c4307cb4e84
 #content {
     display: flex;
     flex-direction: column;
@@ -60,12 +55,6 @@ body{
 }
 
 #title {
-<<<<<<< HEAD
-    border: 1px solid black;
-    border-radius: 25px;
-    font-size: 4rem;
-    padding: 10px;
-=======
     border: 6px solid orange;
     border-radius: 0px 30px 0px 30px;
     border-style: dashed solid;
@@ -86,17 +75,9 @@ body{
 
 #grid-container {
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: repeat(6, 120px);
     grid-template-rows: repeat(8, 60px);
     margin-bottom: 10vh;
-  
-   
-=======
-    grid-template-columns: repeat(6, 50px);
-    grid-template-rows: repeat(8, 40px);
-    margin-bottom: 10vh;
->>>>>>> 871e22e0987e124dbb31e24db9699c4307cb4e84
 
 }
 
@@ -104,10 +85,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
-    border: 1px solid black;
-    font-size: 15px;
-    background-color: #FFE5D4;
-
+    background-color: #BFD3C1;
+    border-radius: 1vh;
+    border: 3px solid #fff;
+    font-size: 24px;
+    font-weight: bold;;
 }
 
