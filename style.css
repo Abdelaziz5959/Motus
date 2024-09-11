@@ -46,10 +46,12 @@ body{
 
 }
 
+
 #content {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 #title {
@@ -68,14 +70,14 @@ body{
    
     
 
+>>>>>>> 871e22e0987e124dbb31e24db9699c4307cb4e84
 }
 
 #grid-container {
     display: grid;
     grid-template-columns: repeat(6, 120px);
     grid-template-rows: repeat(8, 60px);
-    margin-bottom: 7vh;
-
+    margin-bottom: 10vh;
 
 }
 
