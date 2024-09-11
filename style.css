@@ -67,17 +67,14 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
-   
-    
-
->>>>>>> 871e22e0987e124dbb31e24db9699c4307cb4e84
 }
 
-#grid-container {
+#gridContainer {
     display: grid;
     grid-template-columns: repeat(6, 120px);
     grid-template-rows: repeat(8, 60px);
     margin-bottom: 10vh;
+    
 
 }
 
@@ -90,5 +87,6 @@ body{
     border: 3px solid #fff;
     font-size: 24px;
     font-weight: bold;;
+    
 }
 
