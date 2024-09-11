@@ -46,8 +46,6 @@ body{
 
 }
 
-
-
 #content {
     display: flex;
     flex-direction: column;
@@ -55,9 +53,21 @@ body{
 }
 
 #title {
-    border: 1px solid black;
-    border-radius: 25px;
-    font-size: 4rem;
+    border: 6px solid orange;
+    border-radius: 0px 30px 0px 30px;
+    border-style: dashed solid;
+    font-family: "Handjet", sans-serif;
+     font-style: normal;
+     font-size: 8rem;
+     letter-spacing: 10px;
+     background: linear-gradient(to bottom, rgba(50, 63, 121, 0.833), rgba(193, 184, 55, 0.658));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+   
+    
+
 }
 
 #grid-container {
@@ -65,6 +75,7 @@ body{
     grid-template-columns: repeat(6, 120px);
     grid-template-rows: repeat(8, 60px);
     margin-bottom: 7vh;
+
 
 }
 
