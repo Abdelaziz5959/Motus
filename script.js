@@ -8,6 +8,27 @@ let tableau = document.getElementById("gridContainer");
 let cells = document.getElementsByClassName("gridCell");
 let currentCellIndex = 0; 
 
+// mot aleatoire a partir de ma bibliotheque
+const bibliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
+
+function unmot (bibliotheque) {
+    const liste = Math.floor(Math.random() * bibliotheque.length);
+    return bibliotheque[liste]
+    
+}
+const motChoisiParLalgo = unmot(bibliotheque);
+console.log(motChoisiParLalgo);
+
+//  mot aléatoire dans le tableau
+function insererMotDansTableau(mot) {
+    for (let i = 0; i < mot.length; i++) {
+        if (i < cells.length) {
+            cells[i].innerText = mot[i];  
+        }
+    }
+}
+insererMotDansTableau(motChoisiParLalgo);
+
 // touche supprimer
 supp.addEventListener("click", function () {
     if (currentCellIndex > 0) {
@@ -33,4 +54,7 @@ for (let key of allKey) {
             currentCellIndex++; 
         }
     });
-}
+};
+
+
+
