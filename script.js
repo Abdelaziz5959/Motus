@@ -3,8 +3,8 @@ let allKey = document.getElementsByClassName("key");
 let supp = document.querySelector(".delete");
 let keyEnter = document.querySelector(".enter");
 let tableau = document.getElementById("gridContainer"); // Correction du sélecteur
-let bibiliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
-console.log(bibiliotheque);
+const bibliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
+console.log(bibliotheque);
 
 // Sélection des cellules de la grille
 let cells = document.getElementsByClassName("gridCell");
@@ -34,6 +34,32 @@ for (let key of allKey) {
         if (currentCellIndex < cells.length) {
             cells[currentCellIndex].innerText = key.innerText; // Ajouter la lettre dans la cellule actuelle
             currentCellIndex++; // Passer à la cellule suivante
+
         }
     });
 }
+
+
+// test boucle biblio
+
+function unmot (bibliotheque) {
+    const liste = Math.floor(Math.random() * bibliotheque.length);
+    return bibliotheque[liste]
+}
+
+const motChoisiParLalgo = unmot(bibliotheque);
+console.log(motChoisiParLalgo);
+
+// Divise la chaîne en caractères
+let caracteres = motChoisiParLalgo.split(""); 
+console.log(caracteres);
+
+// afficher la 1ere lettre du mot 
+const sliceExample = motChoisiParLalgo.slice(0, 1);
+console.log(sliceExample);
+
+const array = cells;
+
+const firstLetter = array.push(sliceExample);
+
+
