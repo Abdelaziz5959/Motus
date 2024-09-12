@@ -1,36 +1,36 @@
-//              Nos variables                  
-
-let allKey = document.querySelectorAll(".key");
+// Sélection des touches du clavier
+let allKey = document.getElementsByClassName("key");
 let supp = document.querySelector(".delete");
 let keyEnter = document.querySelector(".enter");
-let tableau = document.querySelector(".gridContainer");
+let tableau = document.getElementById("gridContainer"); 
 
-//       Fonction touche delete
+// cellule du tableau défini par 0
+let cells = document.getElementsByClassName("gridCell");
+let currentCellIndex = 0; 
 
-supp.addEventListener("click",function(){
-    let tableauContent = gridContainer.innerText;
-    if(tableauContent.length == 0){
-        return;
+// touche supprimer
+supp.addEventListener("click", function () {
+    if (currentCellIndex > 0) {
+        currentCellIndex--; 
+        cells[currentCellIndex].innerText = ""; 
     }
-    console.log(tableauContent);
-    let newContent = tableauContent.slice(0,tableauContent.length-1);
-    gridContainer.innerText = newContent;
 });
 
-//          Boucle all key
+// touche entrer
+keyEnter.addEventListener("click", function () {
+     
+});
 
-for(let key of allKey){
-    key.addEventListener("click",function(){
-        
-        if(key.classList.contains("key delete") || key.classList.contains("key enter")
-         ){
-            return;  
-            
+// Ajouter une lettre dans le tableau
+for (let key of allKey) {
+    key.addEventListener("click", function () {
+        if (key.classList.contains("delete") || key.classList.contains("enter")) {
+            return; 
         }
-       
-        console.log(key);
-        gridContainer.innerText += key.innerText;
-    })
-};
 
-
+        if (currentCellIndex < cells.length) {
+            cells[currentCellIndex].innerText = key.innerText; 
+            currentCellIndex++; 
+        }
+    });
+}
