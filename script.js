@@ -25,6 +25,7 @@ function insererMotDansTableau(mot) {
         if (i < cells.length) {
             cells[i].innerText = mot[i];  
         }
+        return motChoisiParLalgo.length > 0 ? motChoisiParLalgo[0] : ".";
     }
 }
 insererMotDansTableau(motChoisiParLalgo);
