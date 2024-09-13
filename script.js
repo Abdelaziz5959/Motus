@@ -10,6 +10,27 @@ console.log(bibliotheque);
 let cells = document.getElementsByClassName("gridCell");
 let currentCellIndex = 0; // Garde la trace de la cellule actuelle
 
+function unmot (bibliotheque) {
+    const liste = Math.floor(Math.random() * bibliotheque.length);
+    return bibliotheque[liste]
+    
+}
+const motChoisiParLalgo = unmot(bibliotheque);
+console.log(motChoisiParLalgo);
+
+//  mot aléatoire dans le tableau
+function insererMotDansTableau(mot) {
+    for (let i = 0; i < mot.length; i++) {
+        if (i < cells.length) {
+            cells[i].innerText = mot[i];  
+        }
+        return motChoisiParLalgo.length > 0 ? motChoisiParLalgo[0] : ".";
+    }
+}
+insererMotDansTableau(motChoisiParLalgo);
+
+// touche supprimer
+
 // Fonction pour la touche delete
 supp.addEventListener("click", function () {
     if (currentCellIndex > 0) {
@@ -43,8 +64,6 @@ function unmot (bibliotheque) {
     let liste = Math.floor(Math.random() * bibliotheque.length);
     return bibliotheque[liste]
 }
-
-let motChoisiParLalgo = unmot(bibliotheque);
 console.log(motChoisiParLalgo);
 
 function insererMotDansTableau(mot) {
