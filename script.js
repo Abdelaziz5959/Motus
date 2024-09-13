@@ -2,9 +2,9 @@
 let allKey = document.getElementsByClassName("key");
 let supp = document.querySelector(".delete");
 let keyEnter = document.querySelector(".enter");
-let tableau = document.getElementById("gridContainer");
-let bibiliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
-console.log(bibiliotheque);
+let tableau = document.getElementById("gridContainer"); 
+let bibliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
+console.log(bibliotheque);
 
 // Sélection des cellules de la grille
 let cells = document.getElementsByClassName("gridCell");
@@ -12,8 +12,7 @@ let currentCellIndex = 0;
 const bibliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
 function unmot (bibliotheque) {
     const liste = Math.floor(Math.random() * bibliotheque.length);
-    return bibliotheque[liste]
-    
+    return bibliotheque[liste]   
 }
 const motChoisiParLalgo = unmot(bibliotheque);
 console.log(motChoisiParLalgo);
@@ -30,7 +29,6 @@ function insererMotDansTableau(mot) {
 insererMotDansTableau(motChoisiParLalgo);
 
 // touche supprimer
-
 supp.addEventListener("click", function () {
     if (currentCellIndex > 0) {
         currentCellIndex--; 
@@ -56,11 +54,4 @@ for (let key of allKey) {
             currentCellIndex++; 
         }
     });
-
-};
-
-
-
-
-
-
+}
