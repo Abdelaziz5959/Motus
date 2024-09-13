@@ -25,27 +25,21 @@ function unmot(bibliotheque) {
   const liste = Math.floor(Math.random() * bibliotheque.length);
   return bibliotheque[liste];
 }
-
 const motChoisiParLalgo = unmot(bibliotheque);
 console.log(motChoisiParLalgo);
 
-// Divise la chaîne en caractères
-let caracteres = motChoisiParLalgo.split("");
-console.log(caracteres);
-
-// afficher la 1ere lettre du mot
-const sliceExample = motChoisiParLalgo.slice(0, 1);
-console.log(sliceExample);
-
-function firstletter() {
-  // Assure-toi que motChoisiParLalgo est défini comme une chaîne de caractères
-  const motChoisiParLalgo = ""; // Remplace ceci par ton mot choisi par l'algorithme
-  currentCellIndex; // Affiche la première lettre ou "." si le mot est vide
-  return motChoisiParLalgo.length > 0 ? motChoisiParLalgo[0] : ".";
+//  mot aléatoire dans le tableau
+function insererMotDansTableau(mot) {
+  for (let i = 0; i < mot.length; i++) {
+    if (i < cells.length) {
+      cells[i].innerText = mot[i];
+    }
+    return motChoisiParLalgo.length > 0 ? motChoisiParLalgo[0] : ".";
+  }
 }
+insererMotDansTableau(motChoisiParLalgo);
 
-// Affiche le résultat de la fonction dans la console
-console.log(firstletter());
+// touche supprimer
 
 // Fonction pour la touche delete
 supp.addEventListener("click", function () {
@@ -80,6 +74,10 @@ function unmot(bibliotheque) {
   return bibliotheque[liste];
 }
 console.log(motChoisiParLalgo);
+
+// Divise la chaîne en caractères
+let caracteres = motChoisiParLalgo.split("");
+console.log(caracteres);
 
 // afficher la 1ere lettre du mot
 const slice = motChoisiParLalgo.slice(0, 1);
