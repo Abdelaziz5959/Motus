@@ -66,14 +66,6 @@ function unmot (bibliotheque) {
 }
 console.log(motChoisiParLalgo);
 
-function insererMotDansTableau(mot) {
-    for (let i = 0; i < bibliotheque.length; i++) {
-        if (i < cells.length) {
-            cells[i].innerText = mot[i];  // Insérer chaque lettre du mot dans une cellule
-        }
-    }
-};
-
 // Divise la chaîne en caractères
 let caracteres = motChoisiParLalgo.split(""); 
 console.log(caracteres);
@@ -101,11 +93,10 @@ function afficherPremiereLettre() {
 
     // Afficher la première lettre dans la cellule
     cellule.textContent = premiereLettre;
+
+
+    console.log(premiereLettre);
 }
 
 // Appeler la fonction pour afficher la première lettre
 afficherPremiereLettre();
-
-
-
-
