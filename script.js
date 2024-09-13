@@ -48,7 +48,7 @@ let motChoisiParLalgo = unmot(bibliotheque);
 console.log(motChoisiParLalgo);
 
 function insererMotDansTableau(mot) {
-    for (let i = 0; i < mot.length; i++) {
+    for (let i = 0; i < bibliotheque.length; i++) {
         if (i < cells.length) {
             cells[i].innerText = mot[i];  // Insérer chaque lettre du mot dans une cellule
         }
@@ -63,8 +63,30 @@ console.log(caracteres);
 const slice = motChoisiParLalgo.slice(0, 1);
 console.log(slice);
 
-cells.textContent = slice;
+
+let mot = document.getElementsByClassName("grid-item");
+mot.innerText = bibliotheque;
 
 
-cells.textContent = bibliotheque.innerText;
+
+// Exemple de mot de la bibliothèque
+const motDeLaBibliotheque = "EXEMPLE";  // Le mot à partir duquel on veut afficher la première lettre
+
+function afficherPremiereLettre() {
+    // Obtenir la première lettre du mot
+    const premiereLettre = motChoisiParLalgo.charAt(0);
+
+    // Sélectionner la cellule où afficher la première lettre
+    // Ici, nous choisissons la cellule avec l'ID 'cell1' pour l'exemple
+    const cellule = document.getElementsByClassName('cells');
+
+    // Afficher la première lettre dans la cellule
+    cellule.textContent = premiereLettre;
+}
+
+// Appeler la fonction pour afficher la première lettre
+afficherPremiereLettre();
+
+
+
 
