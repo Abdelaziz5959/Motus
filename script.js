@@ -3,8 +3,8 @@ let allKey = document.getElementsByClassName("key");
 let supp = document.querySelector(".delete");
 let keyEnter = document.querySelector(".enter");
 let tableau = document.getElementById("gridContainer"); // Correction du sélecteur
-let bibiliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
-console.log(bibiliotheque);
+let bibliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
+console.log(bibliotheque);
 
 // Sélection des cellules de la grille
 let cells = document.getElementsByClassName("gridCell");
@@ -32,7 +32,6 @@ insererMotDansTableau(motChoisiParLalgo);
 // touche supprimer
 
 // Fonction pour la touche delete
-
 supp.addEventListener("click", function () {
     if (currentCellIndex > 0) {
         currentCellIndex--; // Revenir à la cellule précédente
@@ -58,11 +57,46 @@ for (let key of allKey) {
             currentCellIndex++; // Passer à la cellule suivante
         }
     });
-
-};
-
-
-
-
 }
 
+
+function unmot (bibliotheque) {
+    let liste = Math.floor(Math.random() * bibliotheque.length);
+    return bibliotheque[liste]
+}
+console.log(motChoisiParLalgo);
+
+// Divise la chaîne en caractères
+let caracteres = motChoisiParLalgo.split(""); 
+console.log(caracteres);
+
+// afficher la 1ere lettre du mot 
+const slice = motChoisiParLalgo.slice(0, 1);
+console.log(slice);
+
+
+let mot = document.getElementsByClassName("grid-item");
+mot.innerText = bibliotheque;
+
+
+
+// Exemple de mot de la bibliothèque
+const motDeLaBibliotheque = "EXEMPLE";  // Le mot à partir duquel on veut afficher la première lettre
+
+function afficherPremiereLettre() {
+    // Obtenir la première lettre du mot
+    const premiereLettre = motChoisiParLalgo.charAt(0);
+
+    // Sélectionner la cellule où afficher la première lettre
+    // Ici, nous choisissons la cellule avec l'ID 'cell1' pour l'exemple
+    const cellule = document.getElementsByClassName('cells');
+
+    // Afficher la première lettre dans la cellule
+    cellule.textContent = premiereLettre;
+
+
+    console.log(premiereLettre);
+}
+
+// Appeler la fonction pour afficher la première lettre
+afficherPremiereLettre();
