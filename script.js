@@ -10,7 +10,32 @@ console.log(bibliotheque);
 let cells = document.getElementsByClassName("gridCell");
 let currentCellIndex = 0; // Garde la trace de la cellule actuelle
 
+
+// mot aleatoire a partir de ma bibliotheque
+const bibliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
+
+function unmot (bibliotheque) {
+    const liste = Math.floor(Math.random() * bibliotheque.length);
+    return bibliotheque[liste]
+    
+}
+const motChoisiParLalgo = unmot(bibliotheque);
+console.log(motChoisiParLalgo);
+
+//  mot aléatoire dans le tableau
+function insererMotDansTableau(mot) {
+    for (let i = 0; i < mot.length; i++) {
+        if (i < cells.length) {
+            cells[i].innerText = mot[i];  
+        }
+    }
+}
+insererMotDansTableau(motChoisiParLalgo);
+
+// touche supprimer
+
 // Fonction pour la touche delete
+
 supp.addEventListener("click", function () {
     if (currentCellIndex > 0) {
         currentCellIndex--; // Revenir à la cellule précédente
