@@ -53,21 +53,14 @@ function insererMotDansTableau(mot) {
             cells[i].innerText = mot[i];  // Insérer chaque lettre du mot dans une cellule
         }
     }
-}
+};
 
 // Divise la chaîne en caractères
 let caracteres = motChoisiParLalgo.split(""); 
 console.log(caracteres);
 
 // afficher la 1ere lettre du mot 
-const sliceExample = motChoisiParLalgo.slice(0, 1);
-console.log(sliceExample);
+const slice = motChoisiParLalgo.slice(0, 1);
+console.log(slice);
 
-function addFirstLetterToArray(unmot, cells) {
-    if (unmot.length > 0) { // Vérifie que la chaîne n'est pas vide
-        let firstLetter = unmot.slice(0, 1); // Extrait la première lettre de la chaîne
-        cells.push(firstLetter); // Ajoute la lettre au tableau
-        console.log(firstLetter); // Affiche la première lettre
-        console.log(cells); // Affiche le tableau mis à jour
-    }
-}
+cells.textContent = slice
