@@ -2,11 +2,14 @@
 let allKey = document.getElementsByClassName("key");
 let supp = document.querySelector(".delete");
 let keyEnter = document.querySelector(".enter");
-let tableau = document.getElementById("gridContainer"); 
+let tableau = document.getElementById("gridContainer"); // Correction du sélecteur
+let bibiliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
+console.log(bibiliotheque);
 
-// cellule du tableau défini par 0
+// Sélection des cellules de la grille
 let cells = document.getElementsByClassName("gridCell");
-let currentCellIndex = 0; 
+let currentCellIndex = 0; // Garde la trace de la cellule actuelle
+
 
 // mot aleatoire a partir de ma bibliotheque
 const bibliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
@@ -30,31 +33,39 @@ function insererMotDansTableau(mot) {
 insererMotDansTableau(motChoisiParLalgo);
 
 // touche supprimer
+
+// Fonction pour la touche delete
+
 supp.addEventListener("click", function () {
     if (currentCellIndex > 0) {
-        currentCellIndex--; 
-        cells[currentCellIndex].innerText = ""; 
+        currentCellIndex--; // Revenir à la cellule précédente
+        cells[currentCellIndex].innerText = ""; // Effacer la cellule actuelle
     }
 });
 
-// touche entrer
+// Fonction pour la touche Enter (tu peux adapter selon ton besoin)
 keyEnter.addEventListener("click", function () {
-     
+    console.log("Enter pressed");
+    // Tu peux ajouter ici ta logique spécifique pour Enter
 });
 
-// Ajouter une lettre dans le tableau
+// Fonction pour ajouter une lettre dans une cellule
 for (let key of allKey) {
     key.addEventListener("click", function () {
         if (key.classList.contains("delete") || key.classList.contains("enter")) {
-            return; 
+            return; // Ignorer les touches delete et enter
         }
 
         if (currentCellIndex < cells.length) {
-            cells[currentCellIndex].innerText = key.innerText; 
-            currentCellIndex++; 
+            cells[currentCellIndex].innerText = key.innerText; // Ajouter la lettre dans la cellule actuelle
+            currentCellIndex++; // Passer à la cellule suivante
         }
     });
+
 };
 
 
+
+
+}
 
