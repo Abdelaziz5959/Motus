@@ -3,7 +3,7 @@ let allKey = document.getElementsByClassName("key");
 let supp = document.querySelector(".delete");
 let keyEnter = document.querySelector(".enter");
 let tableau = document.getElementById("gridContainer"); // Correction du sélecteur
-const bibliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
+let bibliotheque = ["ABBAYE", "BABINE", "CADRAN", "DECLIN", "FARINE", "JOCKEY", "PAPIER", "TALENT", "VENTRE", "WEBCAM"];
 console.log(bibliotheque);
 
 // Sélection des cellules de la grille
@@ -40,11 +40,11 @@ for (let key of allKey) {
 
 
 function unmot (bibliotheque) {
-    const liste = Math.floor(Math.random() * bibliotheque.length);
+    let liste = Math.floor(Math.random() * bibliotheque.length);
     return bibliotheque[liste]
 }
 
-const motChoisiParLalgo = unmot(bibliotheque);
+let motChoisiParLalgo = unmot(bibliotheque);
 console.log(motChoisiParLalgo);
 
 function insererMotDansTableau(mot) {
@@ -63,4 +63,8 @@ console.log(caracteres);
 const slice = motChoisiParLalgo.slice(0, 1);
 console.log(slice);
 
-cells.textContent = slice
+cells.textContent = slice;
+
+
+cells.textContent = bibliotheque.innerText;
+
