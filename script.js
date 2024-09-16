@@ -19,25 +19,24 @@ console.log(motChoisiParLalgo);
 
 //  mot aléatoire dans le tableau
 function insererMotDansTableau(mot) {
-    for (let i = 0; i < mot.length; i++) {
-        if (i < cells.length) {
-            cells[i].innerText = mot[i];  
-        }
-        return motChoisiParLalgo.length > 0 ? motChoisiParLalgo[0] : ".";
+  for (let i = 0; i < mot.length; i++) {
+    if (i < cells.length) {
+      cells[i].innerText = mot[i];
     }
+    return motChoisiParLalgo.length > 0 ? motChoisiParLalgo[0] : ".";
+  }
 }
 insererMotDansTableau(motChoisiParLalgo);
 
 // touche supprimer
-
 supp.addEventListener("click", function () {
-    if (currentCellIndex > 0) {
-        currentCellIndex--; 
-        cells[currentCellIndex].innerText = "";
-    }
+  if (currentCellIndex > 0) {
+    currentCellIndex--;
+    cells[currentCellIndex].innerText = "";
+  }
 });
 
-// Fonction pour la touche Enter 
+// Fonction pour la touche Enter
 keyEnter.addEventListener("click", function () {
   
     let motComposer  = "";
