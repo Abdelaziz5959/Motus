@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #BFD3C1;
+    background-color: #434371;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -19,9 +19,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 35vh;
-    width: 50vw;
-    background-color: #BFD3C1;
+    min-height: 35vh;
+    min-width: 50vw;
+    background-color: #70EE9C;
     border-radius: 1rem;
 }
 
@@ -42,7 +42,7 @@ body{
     padding: 2rem;
     border-radius: 10px;
     font-weight: bold;
-    border: 2px solid black;
+    border: 2px solid #434371;
 
 }
 
@@ -82,9 +82,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #BFD3C1;
+    background-color: #70EE9C;
     border-radius: 1vh;
-    border: 3px solid #fff;
+    border: 3px solid #434371;
     font-size: 24px;
     font-weight: bold;;
     
