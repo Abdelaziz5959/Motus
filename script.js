@@ -49,10 +49,10 @@ keyEnter.addEventListener("click", function () {
 
     if (bibliotheque.includes(motComposer)) {
         alert ("le mot former existe")
-        console.log("Le mot formé correspond à un mot de la bibliothèque.");
+        console.log("Le mot formé correspond à un mot de la bibliothèque");
     } else {
         alert ("le mot former n'existe pas")
-        console.log("Le mot formé ne correspond pas.");
+        console.log("Le mot formé n'existe pas.");
     } 
 
 });
